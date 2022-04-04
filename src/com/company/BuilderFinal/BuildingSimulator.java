@@ -3,12 +3,13 @@ package com.company.BuilderFinal;
 public class BuildingSimulator {
 
     public static void main(String[] args) {
-        BuildingBuilder buildingBuilder = new BuildingBuilder();
-        Building luxuryBuilding = buildingBuilder.buildLuxuryBuilding();
-        Building normalBuilding = buildingBuilder.buildNormalBuilding();
-        System.out.println("luxury building");
+        BuildingBuilder luxuryBuilder = new LuxuryBuldingBuilder();
+        Building luxuryBuilding = luxuryBuilder.build();
+        BuildingBuilder normalBuilder = new LuxuryBuldingBuilder();
+        Building normalBuilding = normalBuilder.build();
+        System.out.println("....luxury building....");
         luxuryBuilding.showDetails();
-        System.out.println("\nnormal building");
+        System.out.println("\n....normal building....");
         normalBuilding.showDetails();
     }
 
